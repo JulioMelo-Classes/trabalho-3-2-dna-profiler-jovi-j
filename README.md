@@ -164,3 +164,27 @@ A saída deve ser exatamente como mostrada nas imagens (com cores e tudo!)
 **Translation to Pt-Br and Further Adaptation: Julio Melo, [julio@imd.ufrn.br](mailto:julio@imd.ufrn.br)**
 
 
+# Avaliação
+
+1. Ler e validar os argumentos da linha de comando | 10 / 10
+
+2. Ler e validar os dados da base de dados e armazená-los em uma classe apropriada | 10 / 10
+
+3. Separar a interface textual das demais classes do sistema concentrando os couts e cins em um único objeto | 7 / 10
+- faltou apresentar no formato especificado
+
+4. Implementação de uma classe para armazenar e validar o DNA de um indivíduo bem como realizar as operações de perfil | 5 / 10
+- erros no algoritmo, como conversamos
+
+5. Implementação eficiente através do uso de referencias, quando você  julgar necessário | 5 / 10
+- aqui em diversos ponto ao usar o objeto DNAProfile vc deveria ter usado referencias
+
+## Demais quesitos (Critério | Peso)
+
+1. Organização do código em src, include, data | 5 / 5
+
+2. Documentação do código usando o padrão doxygen | 0 / 5
+- Não documentado
+
+3. Implementação e documentação de arquivos de teste | 0 / 15
+- não implementado
