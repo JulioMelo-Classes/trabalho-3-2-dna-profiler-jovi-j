@@ -1,2 +1,9 @@
 build
 .vscode
+.cache/clangd/index/Database.cpp.F99276774803AC23.idx
+.cache/clangd/index/Database.h.D2D7E9620D856865.idx
+.cache/clangd/index/DNAProfile.cpp.1BEAE61465C0A750.idx
+.cache/clangd/index/DNAProfile.h.DFA5FA10FFFE79B9.idx
+.cache/clangd/index/Main.cpp.73F62340C5D8B319.idx
+.cache/clangd/index/UserInterface.cpp.265483F1C46F0C53.idx
+.cache/clangd/index/UserInterface.h.A5A7898733ED7849.idx

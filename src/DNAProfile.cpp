@@ -17,21 +17,44 @@ void DNAProfile::setOwner(std::string owner){
 	this->owner_of_profile = owner;
 }
 
+std::map<std::string, unsigned int> DNAProfile::getSTRs(){
+	return this->STRs;
+}
+
 std::string DNAProfile::getOwner(){
 	return this->owner_of_profile;
 }
 
-std::map<std::string, int> DNAProfile::getSTRs(){
-	return this->STRs;
+
+
+bool DNAProfile::isSTROnProfile(std::string STR){
+	if(this->STRs.find(STR) != this->STRs.end()){
+		return true;
+	}
+	return false;
+}
+
+void DNAProfile::setSTRs(std::map<std::string, unsigned int> STRs){
+	this->STRs = STRs;
+}
+unsigned int DNAProfile::getTimesOfSTR(std::string STR){
+	return this->STRs[STR];
 }
 
 float DNAProfile::getMatchPercentage(DNAProfile other_profile){
 	float match_percentage = 0;
-	std::map<std::string, int> other_STRs = other_profile.getSTRs();
-	for(std::map<std::string, int>::iterator it = this->STRs.begin(); it != this->STRs.end(); it++){
-		if(other_STRs.find(it->first) != other_STRs.end()){
-			match_percentage += (float)it->second / (float)other_STRs[it->first];
+	for(auto STR : this->STRs){
+		if(other_profile.getTimesOfSTR(STR.first) == STR.second){
+			match_percentage += 1;
 		}
 	}
-	return match_percentage;
+	match_percentage = match_percentage / this->STRs.size();
+	return match_percentage * 100;
+}
+
+bool DNAProfile::operator==(DNAProfile other_profile){
+	if(this->STRs == other_profile.getSTRs()){
+		return true;
+	}
+	return false;
 }
